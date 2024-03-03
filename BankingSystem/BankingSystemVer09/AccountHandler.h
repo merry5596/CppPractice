@@ -12,7 +12,6 @@
 class AccountHandler
 {
 private:
-    //Account* accountArr[100];
     BoundCheckAccountPtrArray accountArr;
     int accountCnt;
 

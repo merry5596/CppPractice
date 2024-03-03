@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\BankingSystem",
+    "\\BankingSystem\\BankingSystemVer09"
   ],
-  "SelectedNode": "\\.gitignore",
+  "SelectedNode": "\\BankingSystem\\BankingSystem.sln",
   "PreviewInSolutionExplorer": false
 }
