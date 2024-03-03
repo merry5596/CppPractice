@@ -1,7 +1,7 @@
 /*
  * 파일이름: AccountHandler.cpp
  * 작성자: 김혜연
- * 업데이트 정보: [2024.02.15] 파일버전 0.7
+ * 업데이트 정보: [2024.03.03] 파일버전 0.8
  * 설명: Control 클래스인 'AccountHandler' 클래스 정의
  */
 
@@ -34,7 +34,7 @@ void AccountHandler::MakeAccount()
 {
     int opt;
     int id;
-    char name[NAME_LEN];
+    String name;
     int amount;
     int interest;
     int credit;

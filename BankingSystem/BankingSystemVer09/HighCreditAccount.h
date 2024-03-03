@@ -1,7 +1,7 @@
 /*
  * 파일이름: HighCreditAccount.h
  * 작성자: 김혜연
- * 업데이트 정보: [2024.02.15] 파일버전 0.7
+ * 업데이트 정보: [2024.03.03] 파일버전 0.8
  * 설명: 신용신뢰계좌 'HighCreditAccount' 클래스 선언 및 정의
  */
 
@@ -15,7 +15,7 @@ private:
     int creditGrade;
 
 public:
-    HighCreditAccount(int id, char* name, int amount, int interestRate, int grade) : NormalAccount(id, name, amount, interestRate)
+    HighCreditAccount(int id, String name, int amount, int interestRate, int grade) : NormalAccount(id, name, amount, interestRate)
     {
         switch (grade)
         {
