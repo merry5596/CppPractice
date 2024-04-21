@@ -20,13 +20,13 @@ String::String() {
 String::String(const char* s) {
 	len = strlen(s) + 1;
 	str = new char[len];
-	strcpy(str, s);
+	strcpy_s(str, len, s);
 }
 
 String::String(const String& s) {
 	len = s.len;
 	str = new char[len];
-	strcpy(str, s.str);
+	strcpy_s(str, len, s.str);
 }
 
 String::~String() {
@@ -41,14 +41,15 @@ String& String::operator=(const String& s) {
 	}
 	len = s.len;
 	str = new char[len];
-	strcpy(str, s.str);
+	strcpy_s(str, len, s.str);
 	return *this;
 }
 
 String String::operator+(const String& s) {
-	char* newStr = new char[len + s.len - 1];
-	strcpy(newStr, str);
-	strcat(newStr, s.str);
+	int newStrLen = len + s.len - 1;
+	char* newStr = new char[newStrLen];
+	strcpy_s(newStr, newStrLen, s.str);
+	strcat_s(newStr, newStrLen, s.str);
 	String ret = String(newStr);
 	delete []newStr;
 	return ret;
@@ -57,8 +58,8 @@ String String::operator+(const String& s) {
 String& String::operator+=(const String& s) {
 	len += (s.len - 1);
 	char* newStr = new char[len];
-	strcpy(newStr, str);
-	strcat(newStr, s.str);
+	strcpy_s(newStr, len, str);
+	strcat_s(newStr, len, s.str);
 	if (str != NULL) {
 		delete[]str;
 	}
